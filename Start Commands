@@ -1,0 +1,23 @@
+1. Start the Backend (Python)
+Open a Terminal.
+
+Type these commands:
+
+Bash
+
+cd backend
+python app.py
+
+Start the Frontend (React)
+Open a New Terminal (Click the + icon in the terminal panel or press Ctrl + Shift + `).
+
+Type these commands:
+
+Bash
+
+cd frontend
+npm run dev
+
+You should see: Local: http://localhost:5173/
+
+Now open http://localhost:5173 in your browser to use the portal.
