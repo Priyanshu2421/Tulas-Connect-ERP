@@ -518,5 +518,9 @@ def unlock_user():
     return jsonify({"success": True, "message": "Account unlocked successfully"})
 
 if __name__ == '__main__':
-    print("--- Tula's Connect Backend Starting (With Security Lockout) on Port 5000 ---")
-    app.run(debug=True, port=5000)
+    # Railway ke port ko dynamically uthane ke liye
+    port = int(os.environ.get("PORT", 8080))
+    print(f"--- Tula's Connect Backend Starting on Port {port} ---")
+    
+    # host='0.0.0.0' karna Railway ke liye sabse zaroori hai
+    app.run(host='0.0.0.0', port=port, debug=False)
